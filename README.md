@@ -46,3 +46,13 @@ python -m pip install -r requirements.txt
 - `week01/` — Week 1 Python exercises and project code.
 - `requirements.txt` — Required Python packages.
 - `README.md` — Project documentation.
+
+## Tools I use
+
+- Python 3.13.17
+- Visual Studio Code
+- Git
+- GitHub
+- Jupyter Notebook
+- pytest
+- black
