@@ -1,6 +1,5 @@
-def snippet_3():
-    items = [1, 2, 3]
-    print(items[2])
+def snippet_4():
+    config = {"host": "localhost"}
+    print(config["host"])
 
-
-snippet_3()
+snippet_4()
