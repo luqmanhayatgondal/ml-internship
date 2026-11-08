@@ -92,3 +92,14 @@
 - **Relative Refs:** Learned how to navigate through commit history using relative references.
 - **Relative Refs #2:** Practiced moving HEAD to specific commits using relative references.
 - **Reversing Changes:** Learned how to undo changes in Git.
+
+
+## Tuesday Self-Check
+
+1. The staging area lets me choose specific changes for the next commit instead of committing all modified files.
+
+2. Branches let us work on new features separately without affecting the main branch. Changes can be reviewed before merging.
+
+3. I read the last line of a traceback first because it shows the error type and message.
+
+4. A merge conflict happens when Git cannot automatically combine competing changes. I fixed mine by choosing the correct version, removing conflict markers, and committing the resolved file.
