@@ -1,3 +1,5 @@
-total = 10
+def snippet_2():
+    print("Total:", 5)
 
-print(total)
+
+snippet_2()
