@@ -76,3 +76,19 @@
 - Used F5 to start debugging and F10 to execute code step by step.
 - Observed the yellow highlight to understand which line was executing.
 - Successfully checked the output of both snippets.
+
+## Learn Git Branching
+
+### Introduction Sequence
+
+- **Introduction to Git Commits:** Learned how Git records snapshots of tracked files and maintains project history.
+- **Introduction to Git Branching:** Learned how to create new branches and switch between them.
+- **Introduction to Git Merging:** Learned how to combine changes from different branches.
+- **Introduction to Git Rebase:** Learned how Git moves commits onto another base commit.
+
+### Ramping Up
+
+- **Detach yo HEAD:** Learned how to move HEAD directly to a specific commit instead of pointing to a branch.
+- **Relative Refs:** Learned how to navigate through commit history using relative references.
+- **Relative Refs #2:** Practiced moving HEAD to specific commits using relative references.
+- **Reversing Changes:** Learned how to undo changes in Git.
