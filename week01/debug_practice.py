@@ -1,8 +1,10 @@
-def snippet_6():
-    import matplotlib
+def add_item(item, items=None):
+    if items is None:
+        items = []
 
-    print("Matplotlib imported successfully!")
-    print("Matplotlib version:", matplotlib.__version__)
+    items.append(item)
+    return items
 
 
-snippet_6()
+print(add_item("a"))
+print(add_item("b"))
