@@ -2,7 +2,7 @@
 
 ## Environment Setup
 
-**Completion Date:** 8 November 2026
+**Completion Date:** 6 November 2026
 
 ### What I Learned
 - Basic Python environment setup.
