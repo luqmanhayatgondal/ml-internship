@@ -69,3 +69,10 @@
 - Cause: Default empty list dono function calls mein reuse ho rahi thi.
 - Fix: Default argument `None` rakha aur function ke andar new list banayi.
 - Correct output: `['a']` and `['b']`.
+
+### VS Code Debugger Practice
+- Used VS Code Debugger to debug Snippet 1 and Snippet 2.
+- Set breakpoints on the code lines.
+- Used F5 to start debugging and F10 to execute code step by step.
+- Observed the yellow highlight to understand which line was executing.
+- Successfully checked the output of both snippets.
