@@ -1,3 +1,4 @@
-message = "Hello from conflict-practice"
+
+message = "Hello from main branch"
 
 print(message)
