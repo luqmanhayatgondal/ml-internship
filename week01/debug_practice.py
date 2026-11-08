@@ -1,5 +1,6 @@
-def snippet_4():
-    config = {"host": "localhost"}
-    print(config["host"])
+def snippet_5():
+    number = int("42")
+    print(number)
 
-snippet_4()
+
+snippet_5()
