@@ -56,3 +56,10 @@ python -m pip install -r requirements.txt
 - Jupyter Notebook
 - pytest
 - black
+ 
+ ## Running the Project
+
+### Run automated tests
+
+```powershell
+python -m pytest -v
