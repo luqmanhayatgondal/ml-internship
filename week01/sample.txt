@@ -1,0 +1,4 @@
+Hello Python
+
+I am learning AI
+This is my internship
