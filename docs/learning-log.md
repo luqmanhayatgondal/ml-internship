@@ -103,3 +103,27 @@
 3. I read the last line of a traceback first because it shows the error type and message.
 
 4. A merge conflict happens when Git cannot automatically combine competing changes. I fixed mine by choosing the correct version, removing conflict markers, and committing the resolved file.
+
+## Wednesday – Python Data Structures and Exercises
+
+### What I learned
+- Practiced Python functions and docstrings.
+- Learned lists, tuples, sets, and dictionaries.
+- Used Counter to count word frequencies.
+- Practiced list and dictionary comprehensions.
+- Worked with CSV and JSON files.
+- Learned exception handling using try and except.
+- Practiced generators and defaultdict.
+- Used assertions to test my functions.
+
+### What I found difficult
+- Understanding dictionary comprehension.
+- Understanding Counter and generators.
+- Writing correct assertions.
+
+### Progress
+- Completed Exercises 1–14.
+- All four assertions passed.
+- Exercise 15 (Log Analyser) is pending because the sample authentication log file is missing.
+
+- The 203.0.113.x IP addresses stood out in the sample logs and could represent suspicious activity in a real security investigation, although these addresses are reserved for documentation and examples.
