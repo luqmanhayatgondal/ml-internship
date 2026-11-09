@@ -5,6 +5,7 @@ def reverse_string(text):
 
 print(reverse_string("Luqman"))
 
+
 def count_vowels(sentence):
     """Count vowels in a sentence."""
     vowels = "aeiou"
@@ -18,6 +19,7 @@ def count_vowels(sentence):
 
 
 print(count_vowels("Hello World"))
+
 
 def unique_words(sentence):
     """Return sorted unique words in lowercase."""
@@ -38,6 +40,7 @@ def word_frequency(sentence):
 
 print(word_frequency("cat cat dog cat dog"))
 
+
 def flatten_list(nested_list):
     """Return a single list from a nested list."""
     return [item for sublist in nested_list for item in sublist]
@@ -45,12 +48,14 @@ def flatten_list(nested_list):
 
 print(flatten_list([[1, 2], [3, 4], [5, 6]]))
 
+
 def even_squares():
     """Return squares of even numbers from 1 to 20."""
-    return [number ** 2 for number in range(1, 21) if number % 2 == 0]
+    return [number**2 for number in range(1, 21) if number % 2 == 0]
 
 
 print(even_squares())
+
 
 def create_age_dict(names, ages):
     """Create a dictionary of names and ages."""
@@ -61,6 +66,7 @@ names = ["Ali", "Sara", "Luqman"]
 ages = [20, 22, 21]
 
 print(create_age_dict(names, ages))
+
 
 def compare_ips(first, second):
     """Compare two IP lists and return their differences."""
@@ -78,6 +84,7 @@ ips1 = ["192.168.1.1", "10.0.0.1", "172.16.0.1"]
 ips2 = ["192.168.1.1", "10.0.0.2", "172.16.0.1"]
 
 print(compare_ips(ips1, ips2))
+
 
 def count_non_empty_lines(file_path):
     """Count non-empty lines in a text file."""
@@ -128,16 +135,13 @@ def save_and_read_json(data, file_path):
         return json.load(file)
 
 
-student = {
-    "name": "Luqman",
-    "age": 21,
-    "course": "AI/ML"
-}
+student = {"name": "Luqman", "age": 21, "course": "AI/ML"}
 
 result = save_and_read_json(student, "week01/data/student.json")
 
 print(result)
 print(result == student)
+
 
 def safe_int(text):
     """Convert text to integer or return None."""
@@ -149,6 +153,7 @@ def safe_int(text):
 
 print(safe_int("42"))
 print(safe_int("hello"))
+
 
 def lines_containing(file_path, word):
     """Yield lines that contain a specific word."""
@@ -173,12 +178,10 @@ def group_words(words):
 
     return dict(groups)
 
+
 print(group_words(["apple", "ant", "banana", "ball", "cat"]))
 
 assert reverse_string("Luqman") == "namquL"
 assert count_vowels("Hello World") == 3
 assert unique_words("apple banana apple") == ["apple", "banana"]
 assert word_frequency("cat cat dog") == [("cat", 2), ("dog", 1)]
-
-
-
