@@ -1,6 +1,6 @@
 # Week 1 — Learning Log
 
-## Environment Setup
+## Monday – Environment Setup
 
 **Completion Date:** 6 November 2026
 
@@ -126,4 +126,53 @@
 - All four assertions passed.
 - Exercise 15 (Log Analyser) is pending because the sample authentication log file is missing.
 
-- The 203.0.113.x IP addresses stood out in the sample logs and could represent suspicious activity in a real security investigation, although these addresses are reserved for documentation and examples.
+- Identified that 203.0.113.x belongs to the TEST-NET-3 range, reserved for documentation and examples, so it should not be treated as evidence of real suspicious activity.
+
+## Thursday – Reusable Toolkit Package
+
+### What I Learned
+- Learned how to organize Python code into reusable modules.
+- Understood the purpose of `__init__.py`.
+- Practiced importing functions and classes from different modules.
+- Learned how to use `pathlib` to work with file paths.
+
+### What I Built
+- Created a `toolkit` package inside the `week01` folder.
+- Created reusable modules: `stats.py`, `loader.py`, and `log_parser.py`.
+- Created `run_log_report.py` to run the log report.
+- Tested the toolkit modules.
+
+### What I Found Difficult
+- Understanding Python imports.
+- Organizing files into packages.
+- Understanding how modules work together.
+
+### Progress
+- Created and tested the reusable toolkit package.
+- Added the toolkit work to GitHub.
+
+## Friday – Automated Testing and Code Formatting
+
+### What I Learned
+- Learned the basics of automated testing with pytest.
+- Practiced writing test functions.
+- Understood how assertions check expected results.
+- Learned how to format Python code using Black.
+- Practiced checking code quality.
+
+### What I Built
+- Created automated tests for the toolkit modules.
+- Added test files inside the `tests` folder.
+- Installed and used pytest.
+- Used Black to check Python code formatting.
+
+### What I Found Difficult
+- Understanding how to write test cases.
+- Finding and fixing errors in tests.
+- Understanding code formatting rules.
+
+### Progress
+- Successfully ran all 14 tests.
+- All tests passed.
+- Black check passed for all 11 Python files.
+- Pushed the completed work to GitHub.

@@ -32,11 +32,13 @@ def parse_line(line: str) -> LogEvent:
     return LogEvent(timestamp, ip, event, user_text[5:])
 
 
-def read_events(path: Path) -> Iterator[LogEvent]:
+def read_events(path: Path, bad_lines: list[str] | None = None) -> Iterator[LogEvent]:
     """Yield valid events, skipping malformed lines."""
     with path.open("r", encoding="utf-8") as file:
         for line in file:
             try:
                 yield parse_line(line)
             except ValueError:
+                if bad_lines is not None:
+                    bad_lines.append(line.strip())
                 continue
