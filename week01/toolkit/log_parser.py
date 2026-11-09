@@ -22,9 +22,7 @@ def parse_line(line: str) -> LogEvent:
     timestamp_text, ip, event, user_text = parts
 
     try:
-        timestamp = datetime.strptime(
-            timestamp_text, "%Y-%m-%dT%H:%M:%SZ"
-        )
+        timestamp = datetime.strptime(timestamp_text, "%Y-%m-%dT%H:%M:%SZ")
     except ValueError as exc:
         raise ValueError(f"Invalid timestamp: {timestamp_text}") from exc
 
