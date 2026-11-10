@@ -222,3 +222,4 @@ __marimo__/
 # Internship-specific exclusions
 *.log.bak
 data/raw/
+.venv*/

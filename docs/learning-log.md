@@ -174,5 +174,5 @@
 ### Progress
 - Successfully ran all 14 tests.
 - All tests passed.
-- Black check passed for all 11 Python files.
+- Black check passed for all 14 files, including the setup notebook.
 - Pushed the completed work to GitHub.
