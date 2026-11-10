@@ -120,13 +120,14 @@
 - Understanding dictionary comprehension.
 - Understanding Counter and generators.
 - Writing correct assertions.
-
 ### Progress
-- Completed Exercises 1–14.
-- All four assertions passed.
-- Exercise 15 (Log Analyser) is pending because the sample authentication log file is missing.
-
-- Identified that 203.0.113.x belongs to the TEST-NET-3 range, reserved for documentation and examples, so it should not be treated as evidence of real suspicious activity.
+- Completed Exercises 1–14 successfully.
+- Completed Exercise 15 (Log Analyser) using the authentication log file.
+- Successfully analysed 403 total lines, 400 valid events and 3 corrupted lines.
+- Displayed event counts by IP address and event type.
+- Identified the top IP addresses with failed logins.
+- Identified users with more than 5 failed logins from one IP.
+- Identified that 203.0.113.x belongs to the TEST-NET-3 range, reserved for documentation and examples, not evidence of real suspicious activity.
 
 ## Thursday – Reusable Toolkit Package
 
