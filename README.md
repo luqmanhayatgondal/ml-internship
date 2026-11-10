@@ -78,10 +78,10 @@ python .\week01\run_log_report.py
 
 ## Toolkit Modules
 
-- `stats.py` — Provides basic statistics functions.
-- `loader.py` — Loads CSV data.
-- `log_parser.py` — Reads and parses log files.
-- `run_log_report.py` — Runs the log report.
+- `stats.py` — Provides reusable statistical functions such as `mean`, `median`, `mode`, `count_by`, and `top_n`.
+- `loader.py` — Provides the `DataLoader` class to load CSV, JSON, and text files.
+- `log_parser.py` — Provides the `LogEvent` dataclass, `parse_line()` to parse one log line, and `read_events()` to read valid log events while skipping corrupted lines.
+- `run_log_report.py` — Runs the log analysis report and displays total, valid, and corrupted log lines.
 
 ### Example Usage
 
@@ -118,7 +118,7 @@ print(events)
 #### 4. Log Report
 
 ```powershell
-python .\week01\run_log_report.py week01\data\auth_practice.log
+python .\week01\run_log_report.py week01\data\auth.log
 ```
 
 ## Wednesday Learning Finding
@@ -141,4 +141,8 @@ The IP address range 203.0.113.0/24 is reserved for documentation and examples. 
 - Debugging errors and understanding error messages.
 - Learning Git branching, merging, and resolving conflicts.
 - Understanding how Python modules and automated tests work.
+
+## Daily Learning Log
+
+My daily learning progress, completed tasks, difficulties, and debugging notes for Monday to Friday are recorded in `docs/learning-log.md`.
 
