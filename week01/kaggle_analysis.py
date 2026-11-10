@@ -1,9 +1,9 @@
-from pathlib import Path
 import csv
 from collections import Counter
+from pathlib import Path
 
 
-def load_kaggle_data():
+def load_kaggle_data() -> list[dict[str, str]]:
     """Load the Kaggle system logs CSV file."""
     file_path = Path(__file__).parent / "data" / "System logs kaggle.csv"
 
@@ -11,9 +11,11 @@ def load_kaggle_data():
         return list(csv.DictReader(file))
 
 
-def analyze_logs(records):
+def analyze_logs(
+    records: list[dict[str, str]],
+) -> tuple[Counter[str], int, int, int, int]:
     """Analyze log levels and authentication failures."""
-    log_levels = Counter()
+    log_levels: Counter[str] = Counter()
     auth_failures = 0
     ssh_logs = 0
     ftp_logs = 0
@@ -39,7 +41,8 @@ def analyze_logs(records):
     return (log_levels, auth_failures, ssh_logs, ftp_logs, kernel_logs)
 
 
-def main():
+def main() -> None:
+    """Run the Kaggle system log analysis report."""
     records = load_kaggle_data()
 
     log_levels, auth_failures, ssh_logs, ftp_logs, kernel_logs = analyze_logs(records)

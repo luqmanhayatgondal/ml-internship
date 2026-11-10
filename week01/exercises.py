@@ -1,4 +1,10 @@
-def reverse_string(text):
+import csv
+import json
+from collections import Counter, defaultdict
+from collections.abc import Iterator
+
+
+def reverse_string(text: str) -> str:
     """Return the string in reverse order."""
     return text[::-1]
 
@@ -6,7 +12,7 @@ def reverse_string(text):
 print(reverse_string("Luqman"))
 
 
-def count_vowels(sentence):
+def count_vowels(sentence: str) -> int:
     """Count vowels in a sentence."""
     vowels = "aeiou"
     count = 0
@@ -21,7 +27,7 @@ def count_vowels(sentence):
 print(count_vowels("Hello World"))
 
 
-def unique_words(sentence):
+def unique_words(sentence: str) -> list[str]:
     """Return sorted unique words in lowercase."""
     words = sentence.lower().split()
     return sorted(set(words))
@@ -29,10 +35,8 @@ def unique_words(sentence):
 
 print(unique_words("Apple banana apple Mango"))
 
-from collections import Counter
 
-
-def word_frequency(sentence):
+def word_frequency(sentence: str) -> list[tuple[str, int]]:
     """Return the frequency of each word."""
     words = sentence.lower().split()
     return Counter(words).most_common(5)
@@ -41,7 +45,7 @@ def word_frequency(sentence):
 print(word_frequency("cat cat dog cat dog"))
 
 
-def flatten_list(nested_list):
+def flatten_list(nested_list: list[list[int]]) -> list[int]:
     """Return a single list from a nested list."""
     return [item for sublist in nested_list for item in sublist]
 
@@ -49,7 +53,7 @@ def flatten_list(nested_list):
 print(flatten_list([[1, 2], [3, 4], [5, 6]]))
 
 
-def even_squares():
+def even_squares() -> list[int]:
     """Return squares of even numbers from 1 to 20."""
     return [number**2 for number in range(1, 21) if number % 2 == 0]
 
@@ -57,7 +61,7 @@ def even_squares():
 print(even_squares())
 
 
-def create_age_dict(names, ages):
+def create_age_dict(names: list[str], ages: list[int]) -> dict[str, int]:
     """Create a dictionary of names and ages."""
     return {name: age for name, age in zip(names, ages)}
 
@@ -68,7 +72,9 @@ ages = [20, 22, 21]
 print(create_age_dict(names, ages))
 
 
-def compare_ips(first, second):
+def compare_ips(
+    first: list[str], second: list[str]
+) -> tuple[set[str], set[str], set[str]]:
     """Compare two IP lists and return their differences."""
     first_set = set(first)
     second_set = set(second)
@@ -86,7 +92,7 @@ ips2 = ["192.168.1.1", "10.0.0.2", "172.16.0.1"]
 print(compare_ips(ips1, ips2))
 
 
-def count_non_empty_lines(file_path):
+def count_non_empty_lines(file_path: str) -> int:
     """Count non-empty lines in a text file."""
     with open(file_path, "r", encoding="utf-8") as file:
         return sum(1 for line in file if line.strip())
@@ -94,12 +100,10 @@ def count_non_empty_lines(file_path):
 
 print(count_non_empty_lines("week01/sample.txt"))
 
-import csv
 
-
-def department_averages(file_path):
+def department_averages(file_path: str) -> dict[str, float]:
     """Calculate average score for each department."""
-    department_scores = {}
+    department_scores: dict[str, list[int]] = {}
 
     with open(file_path, "r", encoding="utf-8") as file:
         reader = csv.DictReader(file)
@@ -123,10 +127,8 @@ def department_averages(file_path):
 
 print(department_averages("week01/data/sample.csv"))
 
-import json
 
-
-def save_and_read_json(data, file_path):
+def save_and_read_json(data: dict[str, object], file_path: str) -> dict[str, object]:
     """Save dictionary to JSON and read it back."""
     with open(file_path, "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4)
@@ -143,7 +145,7 @@ print(result)
 print(result == student)
 
 
-def safe_int(text):
+def safe_int(text: str) -> int | None:
     """Convert text to integer or return None."""
     try:
         return int(text)
@@ -155,7 +157,7 @@ print(safe_int("42"))
 print(safe_int("hello"))
 
 
-def lines_containing(file_path, word):
+def lines_containing(file_path: str, word: str) -> Iterator[str]:
     """Yield lines that contain a specific word."""
     with open(file_path, "r", encoding="utf-8") as file:
         for line in file:
@@ -166,10 +168,8 @@ def lines_containing(file_path, word):
 for line in lines_containing("week01/sample.txt", "Python"):
     print(line)
 
-from collections import defaultdict
 
-
-def group_words(words):
+def group_words(words: list[str]) -> dict[str, list[str]]:
     """Group words by their first letter."""
     groups = defaultdict(list)
 
@@ -180,6 +180,7 @@ def group_words(words):
 
 
 print(group_words(["apple", "ant", "banana", "ball", "cat"]))
+
 
 assert reverse_string("Luqman") == "namquL"
 assert count_vowels("Hello World") == 3
