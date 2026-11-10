@@ -1,12 +1,13 @@
 import csv
 import json
 from pathlib import Path
+from typing import Any
 
 
 class DataLoader:
     """Load CSV, JSON and text files."""
 
-    def __init__(self, base_dir: Path):
+    def __init__(self, base_dir: Path) -> None:
         self.base_dir = base_dir
 
     def _get_path(self, name: str) -> Path:
@@ -18,14 +19,14 @@ class DataLoader:
 
         return path
 
-    def load_csv(self, name: str) -> list[dict]:
+    def load_csv(self, name: str) -> list[dict[str, str | None]]:
         """Load CSV data as a list of dictionaries."""
         path = self._get_path(name)
 
         with path.open("r", encoding="utf-8", newline="") as file:
             return list(csv.DictReader(file))
 
-    def load_json(self, name: str):
+    def load_json(self, name: str) -> Any:
         """Load and return JSON data."""
         path = self._get_path(name)
 

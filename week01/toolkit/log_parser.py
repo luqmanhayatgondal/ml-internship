@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Iterator
 
 
-@dataclass
+@dataclass(frozen=True)
 class LogEvent:
     timestamp: datetime
     ip: str

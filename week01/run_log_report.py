@@ -16,6 +16,7 @@ def main():
     bad_lines = []
     events = list(read_events(log_path, bad_lines))
 
+    print(f"Total lines: {len(events) + len(bad_lines)}")
     print(f"Total valid events: {len(events)}")
     print(f"Corrupted lines: {len(bad_lines)}")
     print(f"CSV records: {len(loader.load_csv('sample.csv'))}")
