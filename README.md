@@ -85,10 +85,41 @@ python .\week01\run_log_report.py
 
 ### Example Usage
 
-- **Stats:** Calculate the average of a list of numbers.
-- **Loader:** Load records from a CSV file.
-- **Log Parser:** Read events from a log file.
-- **Log Report:** Run the report using `python .\week01\run_log_report.py`.
+#### 1. Statistics
+
+```python
+from week01.toolkit.stats import mean
+
+numbers = [10, 20, 30]
+print(mean(numbers))
+```
+
+#### 2. Data Loader
+
+```python
+from pathlib import Path
+from week01.toolkit.loader import DataLoader
+
+loader = DataLoader(Path("week01/data"))
+records = loader.load_csv("sample.csv")
+print(records)
+```
+
+#### 3. Log Parser
+
+```python
+from pathlib import Path
+from week01.toolkit.log_parser import read_events
+
+events = list(read_events(Path("week01/data/auth_practice.log")))
+print(events)
+```
+
+#### 4. Log Report
+
+```powershell
+python .\week01\run_log_report.py week01\data\auth_practice.log
+```
 
 ## Wednesday Learning Finding
 
