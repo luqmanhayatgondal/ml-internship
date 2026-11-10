@@ -93,6 +93,15 @@
 - **Relative Refs #2:** Practiced moving HEAD to specific commits using relative references.
 - **Reversing Changes:** Learned how to undo changes in Git.
 
+### GitHub Pull Request and Merge Conflict
+
+- Created and pushed the `feature/readme-tools` branch.
+- Added the "Tools I use" section to README.
+- Created Pull Request #2 on GitHub and successfully merged it into `main`.
+- Practiced a deliberate Git merge conflict.
+- Resolved the conflict by selecting the correct changes, removing conflict markers, and committing the resolved file.
+- Cleaned up the practice branch and temporary demo file.
+
 
 ## Tuesday Self-Check
 
