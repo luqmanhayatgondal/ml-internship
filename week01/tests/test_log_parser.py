@@ -20,6 +20,7 @@ def test_parse_invalid_timestamp():
     with pytest.raises(ValueError):
         parse_line("wrong-time 192.168.1.5 LOGIN_SUCCESS user=ali")
 
+
 def test_read_events_skips_corrupted_lines(tmp_path):
     log_file = tmp_path / "test.log"
     log_file.write_text(

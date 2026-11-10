@@ -1,4 +1,3 @@
-
 from pathlib import Path
 from collections import Counter, defaultdict
 
@@ -14,12 +13,7 @@ def parse_line(line):
     if not timestamp.endswith("Z") or not user_text.startswith("user="):
         raise ValueError("Invalid log format")
 
-    return {
-        "timestamp": timestamp,
-        "ip": ip,
-        "event": event,
-        "user": user_text[5:]
-    }
+    return {"timestamp": timestamp, "ip": ip, "event": event, "user": user_text[5:]}
 
 
 def read_events(path):
