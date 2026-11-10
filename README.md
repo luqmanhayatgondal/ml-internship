@@ -4,7 +4,7 @@
 
 ## Student Information
 
-- **Name:** Luqman Hayat
+- **Name:** Luqman Hayat Gondal
 - **Program:** AI/ML Internship
 - **Week:** 01
 - **Python Version:** 3.13.17
@@ -35,7 +35,12 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-### 3. Install required packages
+### 3. Upgrade pip
+
+```powershell
+python -m pip install --upgrade pip
+```
+### 4. Install required packages
 
 ```powershell
 python -m pip install -r requirements.txt
