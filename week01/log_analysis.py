@@ -2,7 +2,8 @@ from pathlib import Path
 from collections import Counter, defaultdict
 
 
-def parse_line(line):
+def parse_line(line: str) -> dict[str, str]:
+    """Parse one log line and return its fields."""
     parts = line.strip().split()
 
     if len(parts) != 4:
@@ -16,7 +17,8 @@ def parse_line(line):
     return {"timestamp": timestamp, "ip": ip, "event": event, "user": user_text[5:]}
 
 
-def read_events(path):
+def read_events(path: Path) -> tuple[list[dict[str, str]], list[str]]:
+    """Read valid log events and collect corrupted lines."""
     valid_events = []
     corrupted_lines = []
 
@@ -31,7 +33,10 @@ def read_events(path):
     return valid_events, corrupted_lines
 
 
-def analyze_events(events):
+def analyze_events(
+    events: list[dict[str, str]],
+) -> tuple[Counter, Counter, defaultdict]:
+    """Analyze events and count activity by IP, event and user."""
     ip_counts = Counter()
     event_counts = Counter()
     failed_logins = defaultdict(Counter)
@@ -46,7 +51,8 @@ def analyze_events(events):
     return ip_counts, event_counts, failed_logins
 
 
-def main():
+def main() -> None:
+    """Run the authentication log analysis report."""
     log_path = Path(__file__).parent / "data" / "auth.log"
 
     events, corrupted_lines = read_events(log_path)

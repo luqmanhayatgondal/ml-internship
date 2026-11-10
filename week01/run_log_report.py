@@ -6,7 +6,8 @@ from toolkit.loader import DataLoader
 from toolkit.log_parser import read_events
 
 
-def main():
+def main() -> None:
+    """Generate and print the authentication log report."""
     base_dir = Path(__file__).parent
     loader = DataLoader(base_dir / "data")
 
