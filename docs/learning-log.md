@@ -188,3 +188,33 @@
 - Verified the log report output: 403 total lines, 400 valid events and 3 corrupted lines.
 - Installed project dependencies in a clean virtual environment and verified the project setup.
 - Pushed the completed work to GitHub.
+
+# Week 2 — Learning Log
+
+## Monday — NumPy and Vectorisation
+
+### What I Learned
+- Learned to create NumPy arrays using `arange` and `reshape`.
+- Practiced array indexing, slicing, filtering and conditional replacement.
+- Learned row sums, column means and broadcasting.
+- Understood the difference between array views and copies.
+- Learned vectorisation and compared Python loops with NumPy operations.
+
+### What I Built
+- Created `01_numpy_exercises.ipynb` with 10 NumPy exercises.
+- Created `02_vectorisation.ipynb` with five Python loop functions and their NumPy versions.
+- Compared Python and NumPy results.
+- Measured execution times and calculated speed-ups.
+- Added a performance comparison table and conclusion.
+- Updated `requirements.txt` with NumPy 2.5.4 and Pandas 3.1.1.
+- Updated README with environment versions.
+
+### What I Found Difficult
+- Understanding NumPy broadcasting.
+- Understanding views and copies.
+- Understanding vectorisation and performance comparisons.
+
+### Progress
+- Successfully executed both Monday notebooks.
+- Verified that all five NumPy functions produced matching results with their Python loop versions.
+- Restarted the kernel and ran all cells successfully.
