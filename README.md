@@ -146,3 +146,18 @@ The IP address range 203.0.113.0/24 is reserved for documentation and examples. 
 
 My daily learning progress, completed tasks, difficulties, and debugging notes for Monday to Friday are recorded in `docs/learning-log.md`.
 
+
+## Week 2 Development Environment
+
+- Python: 3.13.17
+- NumPy: 2.5.4
+- Pandas: 3.1.1
+
+All required Python packages are installed in the project's virtual environment (`.venv`).
+
+To install the required packages, run:
+
+```powershell
+python -m pip install -r requirements.txt
+
+```
