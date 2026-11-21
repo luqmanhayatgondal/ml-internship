@@ -161,3 +161,65 @@ To install the required packages, run:
 python -m pip install -r requirements.txt
 
 ```
+
+## Week 2 — NumPy, Pandas and Sales Data Analysis
+
+### Week 2 Notebooks
+
+- [Monday: NumPy Exercises](week02/01_numpy_exercises.ipynb)
+- [Monday: Vectorisation](week02/02_vectorisation.ipynb)
+- [Tuesday: Sales Data Inspection](week02/03_inspect_sales.ipynb)
+- [Wednesday: Sales Data Cleaning](week02/04_clean_sales.ipynb)
+- [Thursday: Sales Data Analysis — 15 Questions](week02/05_analysis.ipynb)
+- [Friday: Final Cleaning Report](week02/06_final_report.ipynb)
+
+### Reusable Cleaning Function and Tests
+
+The reusable sales cleaning function is available in `week02/sales_cleaning.py`.
+
+To run the automated tests, open the VS Code PowerShell terminal and run:
+
+```powershell
+cd week02
+python -m pytest -v
+```
+
+To format Python files using Black:
+
+```powershell
+python -m black ..
+```
+
+### Data Dictionary
+
+The cleaned dataset's columns, meanings, data types, allowed values and cleaning rules are documented in [the data dictionary](week02/docs/data_dictionary.md).
+
+### Cleaning Summary
+
+- Original raw dataset: 1,040 rows and 10 columns.
+- Final cleaned dataset: 957 rows and 11 columns.
+- Exact duplicate rows were removed.
+- Invalid and missing quantities were excluded.
+- Missing customer names and discounts were handled.
+- Dates and prices were converted into appropriate formats.
+- Revenue was calculated after applying discounts.
+
+### Three Surprising Data Observations
+
+1. The raw dataset contained inconsistent region and status labels because of different capitalization and extra spaces.
+2. The order dates appeared in multiple formats, so they needed to be standardized before analysis.
+3. The quantity column contained negative, zero and unusually large values, which could affect sales analysis if left untreated.
+
+### Monday Vectorisation Timing Results
+
+| Operation | Python Loop (seconds) | NumPy (seconds) | Speedup |
+|---|---:|---:|---:|
+| Sum of squares | 0.223392 | 0.034877 | 6.41x |
+| Z-score | 2.098556 | 0.108647 | 19.32x |
+| Count above threshold | 0.190069 | 0.006695 | 28.39x |
+| Moving average | 2.384449 | 0.039255 | 60.74x |
+| Pairwise distances | 1.153573 | 0.192637 | 5.99x |
+
+### Week 2 Learning Log
+
+Daily learning progress, completed tasks and difficulties are recorded in `docs/learning-log.md`.
