@@ -306,6 +306,8 @@
 - Created 06_final_report.ipynb.
 - Created the data dictionary describing all 11 cleaned dataset columns.
 - Updated the project README and requirements documentation.
+- Verified that all eight pytest tests passed in a fresh virtual environment.
+- Ran all cells in 06_final_report.ipynb successfully without errors.
 
 ### What Blocked Me and How I Got Past It
 - Understanding how to test each cleaning rule independently was challenging.
