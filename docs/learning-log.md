@@ -218,3 +218,102 @@
 - Successfully executed both Monday notebooks.
 - Verified that all five NumPy functions produced matching results with their Python loop versions.
 - Restarted the kernel and ran all cells successfully.
+## Tuesday 10 November 2026 – pandas Basics and Data Inspection
+
+### What I Learned
+- Learned the difference between pandas Series and DataFrames.
+- Practiced reading CSV files and inspecting data using head(), info(), describe() and value_counts().
+- Learned to select and filter data using brackets, loc and iloc.
+
+### What I Built
+- Created 03_inspect_sales.ipynb.
+- Inspected the original sales dataset containing 1,040 rows and 10 columns.
+- Identified 40 duplicate rows and missing values in customer, quantity and discount.
+- Examined inconsistent region and status labels, quantity values and date formats.
+
+### What Blocked Me and How I Got Past It
+- Understanding the different data types and inspection results was difficult.
+- Practiced the pandas inspection methods step by step.
+
+### Questions for My Mentor
+- How should I decide whether a missing value should be filled or its row removed?
+
+### Tomorrow's Plan
+- Clean the sales dataset and document each cleaning decision.
+
+## Wednesday 11 November 2026 – Data Cleaning
+
+### What I Learned
+- Learned how to remove duplicates and standardize text values.
+- Practiced converting price strings into numeric values.
+- Learned to parse multiple date formats explicitly.
+- Understood when to drop invalid rows and when to fill missing values.
+
+### What I Built
+- Created 04_clean_sales.ipynb.
+- Removed 40 duplicate rows.
+- Standardized region and status values.
+- Converted dates and unit prices into appropriate data types.
+- Removed 43 rows with invalid or missing quantities.
+- Filled missing customer and discount values.
+- Calculated revenue and saved the cleaned dataset.
+
+### What Blocked Me and How I Got Past It
+- Handling different date formats and deciding what to do with invalid quantities required extra practice.
+- Used explicit date formats and checked the results after each cleaning step.
+
+### Questions for My Mentor
+- In which situations is filling a missing quantity better than dropping its row?
+
+### Tomorrow's Plan
+- Analyze the cleaned sales data using groupby, merge and pivot tables.
+
+## Thursday 12 November 2026 – Sales Data Analysis
+
+### What I Learned
+- Learned the split-apply-combine approach using groupby.
+- Practiced merging tables using matching columns.
+- Learned to create pivot tables and analyze dates using pandas.
+- Understood how to summarize business data.
+
+### What I Built
+- Created 05_analysis.ipynb.
+- Worked through 15 business questions about sales.
+- Analyzed revenue, regions, products, customers, discounts, profit and order status.
+- Used groupby, merge, pivot_table and date operations.
+
+### What Blocked Me and How I Got Past It
+- Understanding how different pandas operations produce summary tables was challenging.
+- Practiced the operations using the sales dataset and checked the results.
+
+### Questions for My Mentor
+- How can I check that a merge has not unexpectedly increased the number of rows?
+
+### Tomorrow's Plan
+- Convert the cleaning notebook logic into a reusable Python function and test it.
+
+## Friday 13 November 2026 – Consolidation, Testing and Documentation
+
+### What I Learned
+- Learned why reusable functions make data cleaning easier to maintain.
+- Practiced writing automated tests with pytest.
+- Understood how to document dataset columns in a data dictionary.
+- Learned to check Python formatting with Black.
+
+### What I Built
+- Created sales_cleaning.py with the clean_sales() function.
+- Created tests/test_sales_cleaning.py with eight tests.
+- Created 06_final_report.ipynb.
+- Created the data dictionary describing all 11 cleaned dataset columns.
+- Updated the project README and requirements documentation.
+
+### What Blocked Me and How I Got Past It
+- Understanding how to test each cleaning rule independently was challenging.
+- Used small test DataFrames and assertions to check the expected results.
+
+### Questions for My Mentor
+- What improvements should I make to my cleaning function and tests before using them in a larger project?
+
+### Tomorrow's Plan
+- Review the week's work, revise the pandas and NumPy concepts, and prepare for the mentor review.
+
