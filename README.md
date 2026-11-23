@@ -1,17 +1,21 @@
 
 
-# ML Internship — Week 1
+# AI/ML Internship — Week 1 and Week 2
 
 ## Student Information
 
 - **Name:** Luqman Hayat Gondal
 - **Program:** AI/ML Internship
-- **Week:** 01
+- **Weeks Completed:** Week 1 and Week 2
 - **Python Version:** 3.13.17
 
 ## Project Description
 
-This repository contains my Week 1 learning tasks and Python practice for the AI/ML internship.
+This repository contains my Week 1 and Week 2 learning tasks for the AI/ML internship.
+
+Week 1 focused on Python fundamentals, reusable modules, file handling, Git, and automated testing.
+
+Week 2 focused on NumPy, Pandas, data inspection, data cleaning, vectorisation, business data analysis, and writing reusable data-cleaning functions with automated tests.
 
 ## Development Environment
 
@@ -48,8 +52,12 @@ python -m pip install -r requirements.txt
 
 ## Project Structure
 
-- `notebooks/` — Jupyter notebooks.
-- `week01/` — Week 1 Python exercises and project code.
+- `notebooks/` — Jupyter notebooks for learning and practice.
+- `week01/` — Week 1 Python exercises, toolkit modules, tests, and project files.
+- `week02/` — Week 2 NumPy, Pandas, sales data analysis, and cleaning project.
+- `week02/data/raw/` — Original sales and product datasets.
+- `week02/data/processed/` — Cleaned sales dataset.
+- `week02/docs/` — Week 2 data dictionary and documentation.
 - `requirements.txt` — Required Python packages.
 - `README.md` — Project documentation.
 
@@ -171,7 +179,65 @@ python -m pip install -r requirements.txt
 - [Tuesday: Sales Data Inspection](week02/03_inspect_sales.ipynb)
 - [Wednesday: Sales Data Cleaning](week02/04_clean_sales.ipynb)
 - [Thursday: Sales Data Analysis — 15 Questions](week02/05_analysis.ipynb)
+
+The Thursday analysis notebook contains answers to all 15 business questions, including revenue analysis, regional performance, product profitability, customer orders, discounts, and order trends.
+
 - [Friday: Final Cleaning Report](week02/06_final_report.ipynb)
+
+
+### Week 2 Daily Work Summary
+
+#### Monday — NumPy and Vectorisation
+
+- Practiced NumPy arrays, array creation, indexing, slicing, filtering and broadcasting.
+- Completed 10 NumPy exercises.
+- Created five Python loop functions and their NumPy vectorised versions.
+- Compared Python and NumPy results to verify correctness.
+- Measured execution times and calculated speed-ups for all five functions.
+- Successfully ran both Monday notebooks.
+
+#### Tuesday — Pandas and Data Inspection
+
+- Studied Pandas fundamentals and completed the assigned Kaggle lessons 1–3.
+- Loaded and inspected the raw sales dataset using Pandas.
+- Examined the dataset's shape, columns, data types and missing values.
+- Identified 40 duplicate rows.
+- Investigated missing customer names, quantities and discounts.
+- Identified inconsistent region and order-status labels.
+- Documented the initial data quality issues in the inspection notebook.
+
+#### Wednesday — Sales Data Cleaning
+
+- Removed 40 duplicate rows from the raw sales dataset.
+- Standardized region and order-status labels.
+- Parsed multiple date formats into a consistent date format.
+- Removed dollar signs and commas from prices and converted them into numeric values.
+- Identified and removed 43 rows with missing or invalid quantities.
+- Filled missing customer names with `Unknown` and missing discounts with `0.0`.
+- Calculated revenue after applying discounts.
+- Saved the cleaned dataset with 957 rows and 11 columns.
+- Verified that the cleaned dataset had no missing values or duplicate rows.
+
+#### Thursday — Business Data Analysis
+
+- Answered all 15 assigned business questions using Pandas.
+- Practiced `groupby`, dataset merging and pivot tables.
+- Analyzed revenue by region, product, category and month.
+- Identified top products and customers using sales data.
+- Examined cancelled orders, order statuses and discount patterns.
+- Analyzed product profitability by merging sales and product datasets.
+- Documented findings and interpretations in the analysis notebook.
+
+#### Friday — Reusable Cleaning Function, Testing and Final Report
+
+- Created the reusable `clean_sales()` function in `sales_cleaning.py`.
+- Wrote automated tests for duplicate removal, label standardization, date parsing, price conversion, quantity validation, missing values and revenue calculation.
+- Verified that the original DataFrame remains unchanged.
+- Successfully ran all 8 automated tests.
+- Created a data dictionary documenting all 11 cleaned dataset columns.
+- Prepared the final report notebook and successfully executed its cells.
+- Checked Python code formatting using Black; both Python files passed the check.
+
 
 ### Reusable Cleaning Function and Tests
 
@@ -187,7 +253,8 @@ python -m pytest -v
 To format Python files using Black:
 
 ```powershell
-python -m black ..
+cd week02
+python -m black --check .
 ```
 
 ### Data Dictionary
@@ -204,6 +271,19 @@ The cleaned dataset's columns, meanings, data types, allowed values and cleaning
 - Dates and prices were converted into appropriate formats.
 - Revenue was calculated after applying discounts.
 
+### Wednesday Data Cleaning Log
+
+| Cleaning Step | Action Taken | Result |
+|---|---|---|
+| Duplicate rows | Removed exact duplicate rows | 40 rows removed |
+| Region and status | Removed extra spaces and standardized capitalization | 4 regions and 3 statuses |
+| Order dates | Parsed three different date formats | No missing dates |
+| Unit prices | Removed dollar signs and commas, converted to float | Numeric prices |
+| Quantity | Converted to numeric, marked invalid values as missing, and removed them | 43 rows removed |
+| Customer names | Filled missing values with "Unknown" | No missing customer names |
+| Discounts | Filled missing values with 0.0 | No missing discounts |
+| Revenue | Calculated quantity × unit price × (1 − discount) | Total revenue: 4,162,140.15 |
+
 ### Three Surprising Data Observations
 
 1. The raw dataset contained inconsistent region and status labels because of different capitalization and extra spaces.
@@ -212,13 +292,15 @@ The cleaned dataset's columns, meanings, data types, allowed values and cleaning
 
 ### Monday Vectorisation Timing Results
 
-| Operation | Python Loop (seconds) | NumPy (seconds) | Speedup |
+
+| Function | Python Loop (seconds) | NumPy (seconds) | Speed-up |
 |---|---:|---:|---:|
-| Sum of squares | 0.223392 | 0.034877 | 6.41x |
-| Z-score | 2.098556 | 0.108647 | 19.32x |
-| Count above threshold | 0.190069 | 0.006695 | 28.39x |
-| Moving average | 2.384449 | 0.039255 | 60.74x |
-| Pairwise distances | 1.153573 | 0.192637 | 5.99x |
+| Sum of squares | 0.192559 | 0.009248 | 20.82x |
+| Z-score | 0.523407 | 0.024992 | 20.94x |
+| Count above threshold | 0.148642 | 0.004476 | 33.21x |
+| Moving average | 1.155653 | 0.038969 | 29.66x |
+| Pairwise distances | 0.661566 | 0.054974 | 12.03x |
+
 
 ### Week 2 Learning Log
 
